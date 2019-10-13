@@ -11,8 +11,4 @@ class ApplicationController < ActionController::Base
   def unauthorized
     head :unauthorized
   end
-
-  def hello
-    render plain: "#{request.method} => #{request.params}"
-  end
 end

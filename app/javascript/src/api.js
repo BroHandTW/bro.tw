@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const baseURL = 'http://www.lvh.me:3000/api/v1';
+const baseURL = 'http://www.lvh.me:3000/api';
 
 const csrfParam = document.querySelector("meta[name=csrf-param]").content;
 const csrfToken = document.querySelector("meta[name=csrf-token]").content;
