@@ -1,15 +1,11 @@
 <template>
   <div id="app" v-cloak>
     <Layout />
-    <!-- <ActionCable ref="actionCable" /> -->
   </div>
 </template>
 
 <script>
-  // import ActionCable from '@/../src/components/ActionCable.vue';
   import Layout from '@/../src/components/Layout.vue';
-  import SocketChannel from '@/../src/socket/channel';
-  import SocketHandler from '@/../src/socket/handler';
 
   export default {
     name: 'app',
@@ -17,15 +13,10 @@
       return {}
     },
     methods: {},
-    computed: {
-      actionCable(){
-        return this.$refs.actionCable
-      }
-    },
+    computed: {},
     mounted(){
     },
     components: {
-      // ActionCable,
       Layout,
     },
   };

@@ -4,6 +4,7 @@
 class RoomChannel < ApplicationCable::Channel
   def subscribed
     return reject unless current_user
+
     stream_for stream_key
   end
 
@@ -15,12 +16,6 @@ class RoomChannel < ApplicationCable::Channel
     message = data['content']
     sleep(1)
     reply "Did you say #{message} ???"
-  end
-
-  def graphql(data)
-    graphql = data['content']
-    sleep(1)
-    reply BrobaoSchema.execute(graphql).to_json
   end
 
   private
