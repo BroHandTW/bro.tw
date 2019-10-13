@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BroBao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= action_cable_meta_tag %>
+    <%= favicon_link_tag 'logo.png' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+  <body>
+    <%= "#{current_user}/#{current_admin}" if Rails.env.development? %>
+    <%#= yield %>
+  </body>
+</html>
