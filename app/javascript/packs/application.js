@@ -16,6 +16,10 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
 Vue.use(Antd)
 
+// 剪貼簿 https://www.npmjs.com/package/vue-clipboard2
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard)
+
 // Vue.use(ActionCableVue, {
 //   debug: true,
 //   debugLevel: 'all',

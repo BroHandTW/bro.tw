@@ -6,8 +6,6 @@
                v-model="inputUrl"
                @keyup.enter="inputSutmit"
                @keyup.esc="inputClear"
-               @keyup.ctrl.67="inputCopy"
-               @keyup.meta.67="inputCopy"
                size="large"
                ref="inputUrlInput"
                >
@@ -18,6 +16,7 @@
     </div>
     <div v-if="encodedUrl" class="shortened-url" style="margin: 12px 0;">
       <a :href="encodedUrl">{{ encodedUrl }}</a>
+      <a-icon type="copy" @click="inputCopy" />
     </div>
 
   </div>
@@ -44,7 +43,12 @@ import { axios, apiGetEncode } from '@/../src/api.js'
           .then((response)=> this.encodedUrl = response.data )
       },
       inputCopy(){
-        console.log(this.encodedUrl)
+        self = this
+        this.$copyText(this.encodedUrl).then(function (e) {
+          self.$message.success('已複製到剪貼簿')
+        }, function (e) {
+          self.$message.error('複製失敗')
+        })
       },
     }
   };
