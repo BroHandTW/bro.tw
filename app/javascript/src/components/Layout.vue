@@ -3,9 +3,7 @@
     <Header />
     <a-layout-content :style="{ padding: '0 15px', marginTop: '64px' }">
       <Breadcrumb />
-      <div :style="{ background: '#fff', padding: '12px', minHeight: '400px' }">
-        <router-view />
-      </div>
+      <router-view />
     </a-layout-content>
     <a-layout-footer :style="{ textAlign: 'center' }">
       Ant Design ©2018 Created by Ant UED

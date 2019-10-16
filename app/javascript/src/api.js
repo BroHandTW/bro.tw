@@ -31,12 +31,13 @@ baseRequest.interceptors.request.use(function(config){
 //   baseURL: `${baseURL}/search`
 // });
 
+export const axios = Axios;
 export const apiBaseHelloGet = data => baseRequest.get('/hello', { params: data });
 export const apiBaseHelloPost = data => baseRequest.post('/hello', { data });
 export const apiBaseHelloPut = data => baseRequest.put('/hello', { data });
 export const apiBaseHelloPatch = data => baseRequest.patch('/hello', { data });
 export const apiBaseHelloDelete = data => baseRequest.delete('/hello', { data });
-export const axios = Axios;
+export const apiGetEncode = data => baseRequest.get('/encode', { params: data });
 
 // // User 相關的 api
 // export const apiUserLogin = data => userRequest.post('/signIn', data);

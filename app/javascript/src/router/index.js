@@ -4,7 +4,6 @@ import VueRouter from 'vue-router';
 // need @babel/plugin-syntax-dynamic-import
 const Home = () => import('@/../src/views/Home.vue');
 const About = () => import('@/../src/views/About.vue');
-const Share = () => import('@/../src/views/Share.vue');
 const Users = () => import('@/../src/views/Users.vue');
 const User = () => import('@/../src/views/User.vue');
 const Profile = () => import('@/../src/views/Profile.vue');
@@ -28,17 +27,6 @@ const routes = [
       breadcrumb: [
         { name: 'Home', link: 'home' },
         { name: 'About', link: 'about' },
-      ]
-    }
-  }, {
-    name: 'share',
-    path: '/share',
-    component: Share,
-    meta: {
-      title: 'Share',
-      breadcrumb: [
-        { name: 'Home', link: 'home' },
-        { name: 'Share', link: 'share' },
       ]
     }
   }, {
@@ -100,7 +88,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   routes,
 });
 

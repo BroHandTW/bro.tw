@@ -13,7 +13,6 @@
     </a-modal>
   </div>
 </template>
-
 <script>
   export default {
     data(){

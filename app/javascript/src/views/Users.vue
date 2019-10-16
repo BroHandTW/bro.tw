@@ -1,5 +1,5 @@
 <template>
-  <div id="users">
+  <div id="users" :style="{ background: '#fff', padding: '12px', minHeight: '400px' }">
     EasyMode <a-switch checkedChildren="开" unCheckedChildren="关" :checked="easyMode" @change="toggleEasyMode" />
     <a-table
       :size="tableSize"

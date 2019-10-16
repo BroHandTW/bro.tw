@@ -4,13 +4,13 @@
          :src="require('img/logo-header.png')"
          @mouseover="hoverLogo = true"
          @mouseleave="hoverLogo = false"
-         @click="$router.push({name: 'home'})"
+         @click="$router.push({ name: 'home' }).catch(err => {})"
          class="logo" alt="" />
     <img v-show="hoverLogo"
          :src="require('img/logo-header-gray.png')"
          @mouseover="hoverLogo = true"
          @mouseleave="hoverLogo = false"
-         @click="$router.push({name: 'home'})"
+         @click="$router.push({ name: 'home' }).catch(err => {})"
          class="logo" alt=""/>
     <a-menu
       theme="dark"
@@ -42,7 +42,6 @@
         currentMenuKey: [],
         menuItems: [
           { key: 'about', title: 'About', path: '/about' },
-          { key: 'share', title: 'Share', path: '/share' },
           { key: 'users', title: 'Users', path: '/users' },
         ],
       }
