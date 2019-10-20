@@ -11,4 +11,10 @@ class ApplicationController < ActionController::Base
   def unauthorized
     head :unauthorized
   end
+
+  private
+
+  def current_visitor
+    @current_visitor ||= current_visit.visitor
+  end
 end

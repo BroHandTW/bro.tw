@@ -3,8 +3,9 @@
 # :
 class LinkService
   class << self
-    def get_by_url(url)
-      link = Link.find_by(md5: md5(url)) || Link.create(url: url)
+    def get_by_url(url, visitor: nil)
+      link = Link.find_by(visitor: visitor, md5: md5(url)) ||
+             Link.create(visitor: visitor, url: url)
       link.slug
     end
 

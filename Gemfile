@@ -20,8 +20,10 @@ gem 'hiredis', '~> 0.6.1'
 gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+# Rails with Warden. Read more: https://github.com/plataformatec/devise
 gem 'devise'
+# Analytics for Rails. Read more: https://github.com/ankane/ahoy
+gem 'ahoy_matey'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

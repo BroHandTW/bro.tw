@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   namespace :api do
     get 'encode', to: 'links#encode'
     match :hello, via: :all
-    devise_for :admins
-    devise_for :users
     match '*_', to: proc { [404, {}, ['']] }, via: :all
   end
 
@@ -15,4 +13,7 @@ Rails.application.routes.draw do
   root 'application#index'
   match '*_', to: proc { [404, {}, ['']] }, via: :all
   # get '*path', to: 'application#index'
+
+  devise_for :admins
+  devise_for :users
 end

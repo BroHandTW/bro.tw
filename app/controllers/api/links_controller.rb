@@ -5,7 +5,7 @@ class Api::LinksController < ApplicationController
   def encode
     return head :not_found unless params[:url]
 
-    @slug = LinkService.get_by_url params[:url]
+    @slug = LinkService.get_by_url(params[:url], visitor: current_visitor)
 
     render plain: base_url(@slug)
   end
